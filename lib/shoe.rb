@@ -15,9 +15,7 @@ class Shoe
   end
   
   def brand_tracker(brand)
-    if BRANDS.include? (brand)
-      break
-    else
+    unless BRANDS.include? (brand)
       BRANDS << brand
     end
   end
