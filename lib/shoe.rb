@@ -6,12 +6,20 @@ class Shoe
   
   def initialize(brand)
     @brand = brand
-    BRANDS << brand
+    brand_tracker(brand)
   end
 
   def cobble
     self.condition = "new"
     puts "Your shoe is as good as new!"
+  end
+  
+  def brand_tracker(brand)
+    if BRANDS.include? (brand)
+      break
+    else
+      BRANDS << brand
+    end
   end
 
 end
